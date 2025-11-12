@@ -1,15 +1,15 @@
-import { initializeApp } from "firebase/app"
-import { getAuth } from "firebase/auth"
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAQkvh3fVr9OkZ7z0zbqUyG4yPKS9jH0KU",
-  authDomain: "feedify-65b3d.firebaseapp.com",
-  projectId: "feedify-65b3d",
-  storageBucket: "feedify-65b3d.firebasestorage.app",
-  messagingSenderId: "554940473821",
-  appId: "1:554940473821:web:b473cdc625342a70749634",
-  measurementId: "G-184CHSGZ57",
-}
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+};
 
-const app = initializeApp(firebaseConfig)
-export const auth = getAuth(app)
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
